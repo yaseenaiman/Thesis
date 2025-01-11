@@ -18,7 +18,7 @@ for snrInd = 1:length(SP.SNR_db_array)
             %% Receive vector generation
             [F, precoderPhase] = precoderGen(SP);
             [W, combinerPhase] = combinerGen(SP);
-            S = trainSigMatGen(SP.N, SP.N_c, SP.N_s, SP.trainType);
+            S = trainSigMatGen(SP.N, SP.N_c, SP.N_s);
             [y, y_withoutNoise] = receivedSigVec(SP, H, F, W, S);
             y_mat{frameInd} = y;
            
