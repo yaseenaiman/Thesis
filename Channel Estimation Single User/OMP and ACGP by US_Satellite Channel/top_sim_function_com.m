@@ -75,7 +75,7 @@ x_hat_NOMP = x_ACGP;
 
         % OMP
  disp('Starting OMP by Yaseen')
-  [x_OMP] = acgp_yas(y_quant, PhiPsi, SP.N_p*9); 
+  [x_OMP] = omp_yas(y_quant, PhiPsi, SP.N_p*9); 
  x_hat_OMP = x_OMP;
 h_hat_OMP = Psi*x_hat_OMP;
         NMSE_OMP(simInd, snrInd) = 10*log10(norm(h-h_hat_OMP)^2/norm(h)^2);
