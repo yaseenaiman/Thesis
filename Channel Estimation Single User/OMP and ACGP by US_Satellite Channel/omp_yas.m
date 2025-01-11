@@ -2,6 +2,7 @@ function [x_OMP]= omp_yas(x,PhiPsi,m)
 
 % Initialization
 r_OMP = x;
+y_quant=x;
 x_OMP = zeros(size(PhiPsi,2), 1);
 iterations =m;
     Gamma = []; % Index set 
